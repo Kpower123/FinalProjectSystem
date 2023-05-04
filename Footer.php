@@ -11,7 +11,7 @@
             <div class="col-lg-4 col-md-6 col-sm-7">
                 <div class="footer__about">
                     <div class="footer__logo">
-                        <a href="./index.html"><img src="img/LogoFooter.jpg" alt=""></a>
+                        <a href="./index.php"><img src="img/fotter.png" alt=""></a>
                     </div>
                     <p>Every experience is privileged, every choice, is yours to make - the choice of smart luxury.</p>
                     <div class="footer__payment">

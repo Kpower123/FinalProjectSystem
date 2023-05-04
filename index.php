@@ -99,9 +99,9 @@ if(isset($_SESSION['LoginMsg'])){
 ?>
 
 <!-- Page Preloder -->
-<div id="preloder">
+<!-- <div id="preloder">
         <div class="loader"></div>
-</div>
+</div> -->
 
 
 <!-- nav bar -->
@@ -188,7 +188,7 @@ if(isset($_SESSION['LoginMsg'])){
 		
 		if($row= mysqli_fetch_row($result)){
 		?>
-        	<img src="<?php echo $row[1];?>" class="d-block w-100 img-fluid"/> 
+        	<img src="img/banner.png" class="d-block w-100 img-fluid"/> 
             
         <?php
 		

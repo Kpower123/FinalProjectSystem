@@ -1,17 +1,7 @@
-
-
-
 <!-- Style CSS -->
 <link rel="stylesheet" href="css/ss.css">
 
-
-
-
 <?php 
-
-
-
-
 
 //include('Cart.php');
 
@@ -38,7 +28,7 @@ if(isset($_POST['btnSingIn'])){
 
 			
         	
-				<a class="navbar-brand" href="index.html">
+				<a class="navbar-brand" href="index.php">
 					<img src="img/Logo.png" height="75" width="auto" id="nav_logo"/>
             	</a>
                 
@@ -81,7 +71,7 @@ if(isset($_POST['btnSingIn'])){
 				</ul>
 			</div>
             
-            <div class="col-lg-4 m-auto" align="center">
+            <div class="col-lg-6 m-auto">
             	<ul class="navbar-nav">
                 	
                 	<li  class="nav-item border-bottom-0" style="margin:auto">
@@ -108,8 +98,25 @@ if(isset($_POST['btnSingIn'])){
 					?> 
                          
                     </li>
+
+					<li class="nav-item border-bottom-0" style="margin:30px 15px 30px 15px" >
+                    	
+						<?php if (isset($_SESSION['user_details'])) {  ?>
+							<form action="imgocr.php" method="post" enctype="multipart/form-data">
+								<input class="btn btn-warning" style="font-weight:600;  border-radius:30px;" type="file" name="fileToUpload" id="fileToUpload"> 
+								<button class="btn btn-warning" style="font-weight:600;  border-radius:30px;" type="submit" >
+									Submit</button>
+							</form>
+
+						<?php
+						
+						}
+						
+						?>
+                        </span>
+                    </li>
                     
-                    <li class="nav-item border-bottom-0" style="margin:30px" >
+                    <li class="nav-item border-bottom-0" style="margin:30px 50px 30px 15px" >
                     	
 						<?php if (isset($_SESSION['user_details'])) {  ?>
 						
@@ -121,7 +128,7 @@ if(isset($_POST['btnSingIn'])){
 						else{
 						?>
                         	<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-                            	<button type+"submit" class="btn btn-danger" name="btnSingIn" 
+                            	<button type="submit" class="btn btn-danger" name="btnSingIn" 
                             	style="font-weight:600; padding-left:25px; padding-right:25px; border-radius:30px;">Sign In</button>
                             </form>
 						<?php

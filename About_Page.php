@@ -51,7 +51,7 @@
 
 
  <!--  Start about us-->
-<div class="container" style="background:url(img/about_background.png)">
+<div class="container" style="background:url(img/about_background.jpg)">
 
 	 <div class="row pt-5">
     	<div class="heading-title text-center col-lg-7" >
@@ -65,9 +65,10 @@
     
     
         <div class="col-lg-7 col-md-6"  align="justify">
-        	<p>An online store where clients may shop online for groceries and other home items is known as an online supermarket. 
-				Customers no longer need to travel to a physical supermarket to order their food; 
-				they can do so conveniently from the convenience of their homes.</p>
+        	<p>Our staff wants to make sure that you get best possible experience, greeting every customer with a smile. We strive to provide 		
+            a pleasurable atmosphere and encourage you to give us feedback about your experience. At Cute Cuts Salon, we listen to our 
+            customers. All of our trained technicians are state licensed, and we guarantee that you will get quality, consistent service each 
+            time you visit our salon. Our face waxing is done by licensed and certified estheticians.</p>
         </div>
         
     </div>
@@ -79,11 +80,11 @@
     <div class="row mb-5 mt-4">
     	<div class="col-lg-12 m-auto text-center">
         	<h3 class="h3_VM">Vision </h3>
-        	<p class="p_VM">To make your life smart through better Products.</p>
+        	<p class="p_VM">To make your life smart through better hair.</p>
         </div>
         <div class="col-lg-12 m-auto text-center">
         	<h3 class="h3_VM mt-4">Mission</h3>
-        	<p class="p_VM pb-5">To build a supermarket that would offer the finest services available for Products in the world.</p>
+        	<p class="p_VM pb-5">To build a salon that would offer the finest services available for hair in the world.</p>
         </div>
     </div>
     

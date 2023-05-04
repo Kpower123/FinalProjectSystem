@@ -3,12 +3,14 @@
 
 date_default_timezone_set('Asia/Colombo');
 
+// Get the variable data from the URL
+// $ingred = $_GET['ingred'];
+// echo "The variable data is: " . htmlspecialchars($ingred);
 
 // prepare order id
 $order_status = "processing";
 $order_ID = 0;
 $O_ID ="";
-
 $update_order_ID = 0;
 
 $SQL="SELECT * FROM `values` where v_id = '100'; "; 

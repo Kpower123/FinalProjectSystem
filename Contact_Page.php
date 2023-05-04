@@ -60,7 +60,7 @@
                             <ul>
                                 <li>
                                     <h6><i class="fa fa-map-marker"></i> Address</h6>
-                                    <p>No 586, Lake Road Boralasgamuwa, Sri Lanka</p>
+                                    <p>No 25, Lake Road Boralasgamuwa, Sri Lanka</p>
                                 </li>
                                 <li>
                                     <h6><i class="fa fa-phone"></i> Phone</h6>
@@ -68,7 +68,7 @@
                                 </li>
                                 <li>
                                     <h6><i class="fa fa-headphones"></i> Support</h6>
-                                    <p>Support.supermarketgrocery@gmail.com</p>
+                                    <p>Support.cutecutssaloon@gmail.com</p>
                                 </li>
                             </ul>
                         </div>

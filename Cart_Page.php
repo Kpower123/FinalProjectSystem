@@ -24,9 +24,53 @@
 session_start();
 
 include('db_Connection.php');
-
-
 include('Cart.php');
+
+//bulk add to cart
+if(isset($_GET['ingred'])){
+    $ingred = $_GET['ingred'];
+    $ingred = preg_replace("/[^a-zA-Z0-9\s]/", "", $ingred);
+    $ingred = strtolower($ingred);
+    // echo "The variable data is: " . htmlspecialchars($ingred);
+    $words = explode(" ", $ingred);
+    
+    foreach ($words as $word) {
+        $sql ="SELECT * FROM products";
+        $result =mysqli_query($con,$sql);
+        while($row= mysqli_fetch_row($result)){
+            $product_name = strtolower($row[1]);
+            if(strlen($word)>2){
+                if((strstr($product_name, $word)) || (strstr($word, $product_name))){
+                    $_SESSION['total']=0;
+                    // echo "<br> PRODUCT: ".$product_name." // WORD: ".$word. "<br>";
+                    if(isset($_SESSION['cart'])){
+                        $pID = array_map(function($value){return $value['id'];},$_SESSION['cart']);
+                        if(!in_array($row[0],$pID)){
+                            $count = count($_SESSION['cart']);
+                            $proArray = array('id'=>$row[0],'name'=>$row[1],'price'=>$row[2],'qty'=>1,'productImage'=>$row[3]); 
+                            $_SESSION['cart'][$count] =$proArray;			 
+                            $_SESSION['items'] +=1;	  		  
+                        }
+                    }
+                    else{
+                        $proArray = array('id'=>$row[0],'name'=>$row[1],'price'=>$row[2],'qty'=>1,'productImage'=>$row[3]); 
+                        $_SESSION['cart'][0] =$proArray;		
+                        $_SESSION['items']=1;
+                    }
+                }
+            }	
+        }
+        // echo $word . "<br>";
+    }
+}
+
+
+
+
+
+
+
+
 
 $Home = "";
 $Products = "";
@@ -34,9 +78,6 @@ $styles = "";
 $about = "";
 $page = "";
 $contact = "";
-
-
-
 ?>
 
 
@@ -67,7 +108,7 @@ if(isset($_POST['btnContinueCart'])){
 ?>
 </div>
 
-<div class="container">
+<div class="container" style="margin-top: 40px;">
 <div class="row" align="center">
    <div class="col-lg-12 m-auto">
        <h2 class="mt-5 mb-1">Shop Cart</h2>
